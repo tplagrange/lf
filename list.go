@@ -15,6 +15,7 @@ func NewList() *List {
 	return &List{head: &ListElement{}, tail: &ListElement{}}
 }
 
+// For now, adds to tail. From Enqueue(x) operation - Valois 1994
 func (l *List) Add(value interface{}) {
 	q := &ListElement{}
 	q.Set((unsafe.Pointer)(&value))
